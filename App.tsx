@@ -7,9 +7,14 @@ import {
   PermissionsAndroid,
 } from 'react-native';
 import Geolocation from '@react-native-community/geolocation';
+import {
+  withAuthenticator,
+  useAuthenticator,
+} from '@aws-amplify/ui-react-native';
 
 Geolocation.getCurrentPosition(info => console.log(info));
 // import SplashScreen from 'react-native-splash-screen';
+import 'react-native-gesture-handler';
 import SignUpScreen from './src/screens/AuthenticationUI/SignUpScreen/SignUpScreen';
 import NewPasswordScreen from './src/screens/AuthenticationUI/NewPasswordScreen';
 import ConfirmEmailScreen from './src/screens/AuthenticationUI/ConfirmEmailScreen';
@@ -21,8 +26,13 @@ import VehicleTypes from './src/components/VehicleTypes';
 import HomeMap from './src/components/HomeMap';
 import SearchResults from './src/screens/SearchResults';
 import HomeSearch from './src/components/HomeSearch';
+import Router from './src/navigation/Root';
 // import Navigation from './src/navigation';
 navigator.geolocation = require('@react-native-community/geolocation');
+
+// import {Amplify} from 'aws-amplify';
+// import awsExports from './src/aws-exports';
+// Amplify.configure(awsExports);
 
 const App: () => React.ReactNode = () => {
   // useEffect(() => {
@@ -70,13 +80,14 @@ const App: () => React.ReactNode = () => {
       {/* <ConfirmEmailScreen /> */}
       {/* <ForgotPasswordScreen /> */}
       {/* <NewPasswordScreen /> */}
-      <HomeScreen />
+      {/* <HomeScreen /> */}
       {/* <HomeSearch /> */}
       {/* <DestinationSearch /> */}
       {/* <HomeMap /> */}
       {/* <VehicleTypes /> */}
       {/* <SearchResults /> */}
       {/* <DestinationSearch /> */}
+      <Router />
     </SafeAreaView>
   );
 };

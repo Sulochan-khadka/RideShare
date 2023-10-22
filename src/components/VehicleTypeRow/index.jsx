@@ -8,10 +8,10 @@ const VehicleTypeRow = props => {
   const {type} = props;
 
   const getImage = () => {
-    if (type.type === 'UberX') {
+    if (type.type === 'Basic') {
       return require('../../assets/images/UberX.jpeg');
     }
-    if (type.type === 'Comfort') {
+    if (type.type === 'Economic') {
       return require('../../assets/images/Comfort.jpeg');
     }
     return require('../../assets/images/UberXL.jpeg');
