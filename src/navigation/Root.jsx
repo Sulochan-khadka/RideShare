@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, Text} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import HomeNavigator from './Home';
 import CustomDrawer from './CustomDrawer';
@@ -8,7 +9,6 @@ import CustomDrawer from './CustomDrawer';
 const Drawer = createDrawerNavigator();
 
 const DummyScreen = props => (
-  // eslint-disable-next-line react-native/no-inline-styles
   <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
     <Text>{props.name}</Text>
   </View>
@@ -17,10 +17,7 @@ const DummyScreen = props => (
 const RootNavigator = props => {
   return (
     <NavigationContainer>
-      <Drawer.Navigator
-        drawerContent={props => {
-          <CustomDrawer {...props} />;
-        }}>
+      <Drawer.Navigator drawerContent={props => <CustomDrawer {...props} />}>
         <Drawer.Screen name="RideShare" component={HomeNavigator} />
 
         <Drawer.Screen name="Your Trips">

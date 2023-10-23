@@ -1,0 +1,30 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-rideshare-dev-120915-authRole",
+      "UnauthRoleArn": "arn:aws:iam::352145667882:role/amplify-rideshare-dev-120915-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::352145667882:role/amplify-rideshare-dev-120915-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-rideshare-dev-120915-deployment",
+      "UnauthRoleName": "amplify-rideshare-dev-120915-unauthRole",
+      "StackName": "amplify-rideshare-dev-120915",
+      "StackId": "arn:aws:cloudformation:us-east-1:352145667882:stack/amplify-rideshare-dev-120915/e5dd9770-716e-11ee-92f9-0a9ae641c129",
+      "AmplifyAppId": "d3uw1yna16p418",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-rideshare-dev-120915-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+    },
+    "categories": {
+      "auth": {
+        "rideshare950f0d10950f0d10": {}
+      },
+      "function": {
+        "rideshare950f0d10950f0d10PostConfirmation": {
+          "deploymentBucketName": "amplify-rideshare-dev-120915-deployment",
+          "s3Key": "amplify-builds/rideshare950f0d10950f0d10PostConfirmation-7536454e45396e465743-build.zip"
+        }
+      },
+      "api": {
+        "rideshare": {}
+      }
+    }
+  }
+}

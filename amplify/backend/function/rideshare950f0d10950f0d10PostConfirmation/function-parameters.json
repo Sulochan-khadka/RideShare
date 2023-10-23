@@ -1,0 +1,16 @@
+{
+  "trigger": true,
+  "modules": [
+    "custom"
+  ],
+  "parentResource": "rideshare950f0d10950f0d10",
+  "functionName": "rideshare950f0d10950f0d10PostConfirmation",
+  "resourceName": "rideshare950f0d10950f0d10PostConfirmation",
+  "parentStack": "auth",
+  "triggerEnvs": "[]",
+  "triggerDir": "/snapshot/amplify-cli/build/node_modules/@aws-amplify/amplify-category-auth/provider-utils/awscloudformation/triggers/PostConfirmation",
+  "triggerTemplate": "PostConfirmation.json.ejs",
+  "triggerEventPath": "PostConfirmation.event.json",
+  "roleName": "rideshare950f0d10950f0d10PostConfirmation",
+  "skipEdit": true
+}
