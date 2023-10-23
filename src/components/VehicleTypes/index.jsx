@@ -6,28 +6,30 @@ import VehicleTypeRow from '../VehicleTypeRow';
 import typesData from '../../assets/data/types';
 import {ScrollView} from 'react-native-gesture-handler';
 
-const VehicleTypes = props => {
-  const confirm = () => {
-    console.warn('confirm');
-  };
+const VehicleTypes = ({typeState, onSubmit}) => {
+  const [selectedType, setSelectedType] = typeState;
 
   return (
     <ScrollView>
-      <View>
-        {typesData.map(type => (
-          <VehicleTypeRow type={type} key={type.id} />
-        ))}
-        <Pressable
-          onPress={confirm}
-          style={{
-            backgroundColor: 'black',
-            padding: 10,
-            margin: 10,
-            alignItems: 'center',
-          }}>
-          <Text style={{color: 'white', fontWeight: 'bold'}}>Confirm Ride</Text>
-        </Pressable>
-      </View>
+      {typesData.map(type => (
+        <VehicleTypeRow
+          type={type}
+          key={type.id}
+          isSelected={type.type === selectedType}
+          onPress={() => setSelectedType(type.type)}
+        />
+      ))}
+
+      <Pressable
+        onPress={onSubmit}
+        style={{
+          backgroundColor: 'black',
+          padding: 10,
+          margin: 10,
+          alignItems: 'center',
+        }}>
+        <Text style={{color: 'white', fontWeight: 'bold'}}>Confirm Ride</Text>
+      </Pressable>
     </ScrollView>
   );
 };
